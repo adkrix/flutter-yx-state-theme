@@ -3,34 +3,34 @@ import 'package:get_it/get_it.dart';
 import 'package:yx_state_flutter/yx_state_flutter.dart';
 
 import 'services/services.dart';
-
-import 'home_page.dart';
+import 'home_screen.dart';
 
 void main() {
-  final themeController = ThemeController();
-  GetIt.I.registerSingleton<ThemeController>(themeController);
+  GetIt.I.registerSingleton<SettingsController>(SettingsController());
   GetIt.I.registerSingleton<CounterController>(CounterController(0));
 
-  return runApp(YxStateApp(theme: themeController));
+  return runApp(MyApp());
 }
 
-class YxStateApp extends StatelessWidget {
-  final ThemeController theme;
+class MyApp extends StatelessWidget {
 
-  const YxStateApp({super.key, required this.theme});
-  // final CounterController cc = GetIt.I<CounterController>(
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return StateBuilder<ThemeMode>(
-      stateReadable: theme,
-      builder: (context, state, _) => MaterialApp(
-        title: 'Flutter yx_state Demo',
-        debugShowCheckedModeBanner: false,
-        themeMode: state,
-        theme: ThemeData(colorSchemeSeed: Colors.blue),
-        darkTheme: ThemeData.dark(),
-        home: const HomePage(title: 'Flutter Demo yx_state Home Page'),
-      ),
+    final settings = GetIt.I<SettingsController>();
+    return StateBuilder<AppSettings>(
+      stateReadable: settings,
+      builder: (context, state, _) {
+        return MaterialApp(
+          title: 'Flutter yx_state Demo',
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData.light(),
+          darkTheme: ThemeData.dark(),
+          themeMode: state.theme,
+          home: const HomeScreen(title: 'Flutter Demo yx_state Home Page'),
+        );
+      },
     );
   }
 }

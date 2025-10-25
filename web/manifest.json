@@ -1,6 +1,6 @@
 {
-    "name": "yx_state_example",
-    "short_name": "yx_state_example",
+    "name": "yx_state_theme",
+    "short_name": "yx_state_theme",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

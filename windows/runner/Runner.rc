@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "yx_state_example" "\0"
+            VALUE "FileDescription", "yx_state_theme" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "yx_state_example" "\0"
+            VALUE "InternalName", "yx_state_theme" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "yx_state_example.exe" "\0"
-            VALUE "ProductName", "yx_state_example" "\0"
+            VALUE "OriginalFilename", "yx_state_theme.exe" "\0"
+            VALUE "ProductName", "yx_state_theme" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

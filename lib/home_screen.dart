@@ -3,24 +3,24 @@ import 'package:get_it/get_it.dart';
 import 'package:yx_state_flutter/yx_state_flutter.dart';
 import 'services/services.dart';
 
-class HomePage extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   final String title;
 
-  const HomePage({super.key, required this.title});
+  const HomeScreen({super.key, required this.title});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   late final CounterController _counterController;
-  late final ThemeController _themeController;
+  late final SettingsController _themeController;
 
   @override
   void initState() {
     super.initState();
     _counterController = GetIt.I<CounterController>();
-    _themeController = GetIt.I<ThemeController>();
+    _themeController = GetIt.I<SettingsController>();
   }
 
   @override

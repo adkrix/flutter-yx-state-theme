@@ -1,4 +1,4 @@
-# yx_state_example
+# yx_state_theme
 
 A new Flutter project.
 
